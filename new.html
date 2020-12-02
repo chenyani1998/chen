@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music player</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="皮肤.css">
+</head>
+<body>
+<audio id="id-audio-player" src="audio/盛夏的微风.mp3" data-name="盛夏的微风.mp3" data-play="F" data-path="0" class="hidden"></audio>
+<div class="container">
+    <header>
+        <div class="playlist">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="setting">
+            <i class="fa fa-cog"></i>
+        </div>
+    </header>
+    <main>
+        <div class="album-art">
+            <img src="alert.jpg" alt="" />
+        </div>
+
+        <div class="player">
+            <i id="id-button-replay" class="fa fa-repeat "></i>
+            <i id="id-button-last" class="fa fa-fast-backward"></i>
+            <i id="id-button-play" class="fa fa-play"></i>
+            <i id="id-button-next" class="fa fa-fast-forward"></i>
+            <i id="id-button-random" class="fa fa-random"></i>
+        </div>
+    </main>
+    <footer>
+        <div class="title">music player
+        </div>
+        <div class="time-tracker">
+            <div class="timer">
+                <div class="bg">
+                    <div class="last">
+                        <div class="dot"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="time"></div>
+        </div>
+    </footer>
+</div>
+<script src="box.js"></script>
+<script>
+    let time = e(".time")
+    if (time == null) {
+        let t = `
+           <span class="span" id="id-span-now">0</span>/<span class="span" id="id-span-all">0</span>
+                `
+        time.insertAdjacentHTML('beforeend', t)
+    }
+    //let inner = e('.bg')
+    //inner.style.width = '0%'
+</script>
+<script src="player.js"></script>
+</body>
+</html>

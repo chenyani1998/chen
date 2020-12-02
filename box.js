@@ -3,7 +3,7 @@ const log = console.log.bind(console)
 const e = function(selector) {
     let element = document.querySelector(selector)
     if (element === null) {
-        let s = `${selector} 写错了, 请仔细检查`
+        let s = `选择器 ${selector} 写错了, 请仔细检查`
         alert(s)
         return null
     } else {
@@ -15,7 +15,7 @@ const e = function(selector) {
 const es = function(selector) {
     let elements = document.querySelectorAll(selector)
     if (elements.length === 0) {
-        let s = `${selector} 写错了, 请仔细检查`
+        let s = `选择器 ${selector} 写错了, 请仔细检查`
         alert(s)
         return []
     } else {
