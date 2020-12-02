@@ -15,7 +15,7 @@ const e = function(selector) {
 const es = function(selector) {
     let elements = document.querySelectorAll(selector)
     if (elements.length === 0) {
-        let s = `选择器 ${selector} 写错了, 请仔细检查`
+        let s = `${selector} 写错了, 请仔细检查`
         alert(s)
         return []
     } else {
